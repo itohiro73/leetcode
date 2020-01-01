@@ -2,11 +2,14 @@
 # @param {Integer} target
 # @return {Integer[]}
 def two_sum(nums, target)
+    hash = {}
     for i in 0..nums.length-1
-        for j in i+1..nums.length-1
-            if (nums[i] + nums[j]) == target
-                return [i, j]
-            end
+        hash[nums[i]] = i    
+    end
+    for i in 0..nums.length-1
+        complement = target - nums[i]
+        if hash.has_key?(complement) && (hash[complement] != i)
+            return [i, hash[complement]]
         end
     end
 end
