@@ -149,4 +149,10 @@ describe "Median of Two Sorted Arrays" do
   it "returns 3" do
     expect(find_median_sorted_arrays([1, 2, 3], [4, 5])).to eq 3 
   end
+  it "returns 3.5" do
+    expect(find_median_sorted_arrays([1, 2, 3], [4, 5, 6])).to eq 3.5 
+  end
+  it "returns 3.5" do
+    expect(find_median_sorted_arrays([4, 5, 6], [1, 2, 3])).to eq 3.5 
+  end
 end
