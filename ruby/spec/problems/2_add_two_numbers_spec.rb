@@ -23,4 +23,11 @@ describe "Add Two Numbers" do
     output.next.next = ListNode.new(8)
     expect(linked_list_to_array(add_two_numbers(l1, l2))).to eq linked_list_to_array(output)
   end
+  it "returns (0 -> 1)" do
+    l1 = ListNode.new(5)
+    l2 = ListNode.new(5)
+    output = ListNode.new(0)
+    output.next = ListNode.new(1)
+    expect(linked_list_to_array(add_two_numbers(l1, l2))).to eq linked_list_to_array(output)
+  end
 end
